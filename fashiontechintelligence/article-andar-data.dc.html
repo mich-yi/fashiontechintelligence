@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:oklch(9% 0.002 90);}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:oklch(62% 0.01 90);}
+  ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
+  p{margin:0;}
+  h2{margin:0;}
+  @font-face{font-family:'Voire Display ExtraLight';src:url('uploads/voire-display-extralight/Voire Display ExtraLight.ttf');font-weight:200;}
+</style>
+</helmet>
+
+<div style="background:oklch(9% 0.002 90); color:oklch(96% 0.004 90); font-family:'Manrope',sans-serif; min-height:100vh;">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:26px 56px; border-bottom:1px solid oklch(30% 0.01 90); flex-wrap:wrap; gap:16px;">
+    <a href="index.dc.html" style="font-family:'Voire Display ExtraLight',sans-serif; font-size:24px; letter-spacing:0.01em;">Fashion Tech Intelligence</a>
+    <div style="display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
+      <nav style="display:flex; gap:28px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(80% 0.01 90);">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><a href="archive.dc.html">Categories</a><a href="search.dc.html">Search</a><a href="about.dc.html">About</a></sc-if>
+        <sc-if value="{{ isKo }}"><a href="archive.dc.html">카테고리</a><a href="search.dc.html">검색</a><a href="about.dc.html">소개</a></sc-if>
+      </nav>
+      <div style="font-size:12px; letter-spacing:0.08em;">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span onclick="{{ setEn }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; color:oklch(60% 0.01 90);">KO</span></sc-if>
+        <sc-if value="{{ isKo }}"><span onclick="{{ setEn }}" style="cursor:pointer; color:oklch(60% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">KO</span></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:64px 40px 0;">
+    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:20px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">BIG DATA &amp; ML</sc-if>
+      <sc-if value="{{ isKo }}">빅데이터 &amp; ML</sc-if>
+    </div>
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:44px; line-height:1.15; font-weight:600; margin-bottom:22px;">The Power of Data and AI Behind Andar's Turnaround Story</div></sc-if>
+    <sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:40px; line-height:1.2; font-weight:600; margin-bottom:22px;">안다르 성공 비결, 데이터와 AI의 힘</div></sc-if>
+    <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:18px; line-height:1.6; color:oklch(78% 0.005 90); margin-bottom:26px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Behind Andar's record-breaking revenue is a performance marketing engine built on big data, BI, and AI — not intuition.</sc-if>
+      <sc-if value="{{ isKo }}">안다르의 기록적인 매출 뒤에는 직관이 아니라 빅데이터, BI, AI로 구축된 퍼포먼스 마케팅 엔진이 있다.</sc-if>
+    </div>
+    <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
+      <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
+      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>September 5, 2025 · 5 min read</span></sc-if>
+      <sc-if value="{{ isKo }}"><span>2025년 9월 5일 · 5분 소요</span></sc-if>
+    </div>
+    </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:44px 40px 0;">
+    <div style="width:100%; aspect-ratio:16/9; overflow:hidden;"><img src="uploads/kjhgfds.png" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div style="font-family:'Manrope',sans-serif; font-size:13px; color:oklch(52% 0.008 90); font-style:italic; padding:14px 4px 0;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">A team reviews customer segments and channel performance — the dashboards behind the turnaround.</sc-if>
+      <sc-if value="{{ isKo }}">고객 세그먼트와 채널 성과를 함께 검토하는 팀 — 턴어라운드를 뒷받침한 대시보드다.</sc-if>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:56px auto 0; padding:0 40px; display:flex; flex-direction:column;">
+    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:18px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">IN THIS ARTICLE</sc-if>
+      <sc-if value="{{ isKo }}">목차</sc-if>
+    </div>
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+      <a href="#s1" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">A record-breaking turnaround</a>
+      <a href="#s2" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">Performance marketing at the core</a>
+      <a href="#s3" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">Where BI comes in</a>
+      <a href="#s4" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">What AI adds</a>
+    </sc-if>
+    <sc-if value="{{ isKo }}">
+      <a href="#s1" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">기록적인 턴어라운드</a>
+      <a href="#s2" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">핵심은 퍼포먼스 마케팅</a>
+      <a href="#s3" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">BI가 필요한 이유</a>
+      <a href="#s4" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">AI가 더하는 것</a>
+    </sc-if>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:56px 40px 0;">
+    <div>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
+
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">A Record-Breaking Turnaround</h2>
+          <p>Andar's dramatic turnaround offers an important lesson for the fashion industry. Once weighed down by financial difficulties and weak performance, the Korean athleisure brand returned to profitability and significantly improved its earnings after being acquired by Eco Marketing in May 2021. In 2024, Andar posted record-breaking revenue of KRW 236.8 billion, while its operating margin rose from 9% in 2023 to 14%.</p>
+          <p>Its success was undoubtedly driven by several strategic initiatives, including differentiated product development, category expansion, and broadening its customer base beyond women to include men and children. Yet a closer look at the post-acquisition transformation under Eco Marketing — a company renowned for performance marketing — reveals that data-driven management was at the heart of Andar's resurgence.</p>
+
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Performance Marketing at the Core</h2>
+          <p>The foundation of this success lies in performance marketing, demonstrating the critical role that data-driven operations, Business Intelligence (BI), and AI now play in modern retail. Performance marketing is a digital marketing model in which advertisers pay only when customers complete measurable actions such as clicking an advertisement, making a purchase, registering as a member, or downloading an app. In other words, it relies on real-time data to rigorously measure campaign effectiveness and continuously optimize social media marketing efforts.</p>
+          <p>Behind Andar's success is a big data platform that made this level of performance marketing possible. Rather than simply collecting point-of-sale (POS) sales data, the company integrated and analyzed customer behavior, purchasing patterns, and product response data. These insights enabled Andar to develop products that more accurately reflected customer needs, contributing significantly to its commercial success.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"It is no longer feasible to determine which campaigns are effective — or which customers will respond to which products — based on intuition alone."</div>
+          </div>
+
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Where BI Comes In</h2>
+          <p>Today's fashion marketing is characterized by the large-scale, repeated exposure made possible through social media. In an environment flooded with content and advertising, it is no longer feasible to determine which campaigns are effective — or which customers will respond to which products — based on intuition alone. Competitive advantage increasingly depends on data-driven decision-making: analyzing the characteristics of best-selling products, tracking customer responses in real time, and rapidly refining marketing strategies based on measurable results.</p>
+          <p>This is precisely where Business Intelligence (BI) becomes essential. Data collected through big data platforms is connected to BI and analytics environments, enabling companies to determine which products should be produced in greater quantities and which marketing channels deserve greater investment. Importantly, while systems are responsible for collecting and analyzing data, people remain responsible for interpreting the insights and making final business decisions.</p>
+
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">What AI Adds</h2>
+          <p>As the volume of real-time social media marketing data continues to grow, analyzing campaign performance, evaluating results, and determining the next course of action has become increasingly difficult for humans to manage alone. This is where AI delivers its greatest value. AI agents can analyze data to predict customer behavior and evaluate marketing performance. Combined with generative AI, they can also automatically create advertising copy and marketing content, accelerating both execution and optimization.</p>
+          <p>Andar's success demonstrates that fashion companies can no longer compete on creativity, trends, and intuition alone. Data-driven product planning, inventory and supply chain management, BI-powered decision-making, and real-time marketing optimization through AI agents will increasingly define competitive advantage. To respond effectively to rapidly changing markets and unpredictable consumer demand, companies must combine sophisticated data analysis with agile execution. As Andar's experience illustrates, data-driven management is no longer a strategic option — it has become an essential foundation for sustainable growth in the fashion industry.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"Data-driven management is no longer a strategic option — it has become an essential foundation for sustainable growth."</div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isKo }}">
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.95; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
+
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">기록적인 턴어라운드</h2>
+          <p>안다르의 극적인 반등은 패션 업계에 중요한 메시지를 던지고 있다. 한때 경영난과 실적 부진에 시달렸던 안다르는 2021년 5월 에코마케팅에 인수된 이후 흑자 전환과 수익성 개선에 성공했다. 2024년 매출은 2,368억원으로 역대 최고 실적을 기록했고, 영업이익률도 2023년 9%에서 14%까지 상승했다. 물론 패션 측면에서 차별화된 상품력과 카테고리 확장, 여성중심에서 남성·키즈까지 고객층을 넓힌 전략도 중요한 성공 요인이었다. 그러나 퍼포먼스 마케팅 전문기업인 에코마케팅이 인수 이후의 성과를 살펴보면, 그 중심에는 데이터 기반 경영이 있었다.</p>
+
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">핵심은 퍼포먼스 마케팅</h2>
+          <p>그 비결은 데이터 기반의 사업 운영과 BI (Business Intelligence) 활용, 그리고 AI 도입이 얼마나 중요한지 보여주는 안다르의 '퍼포먼스 마케팅'에 있다. 퍼포먼스 마케팅은 고객이 클릭, 구매, 회원가입, 앱 다운로드 등 특정 행동을 완료했을 때만 성과 기반으로 비용을 지불하는 디지털 마케팅이다. 즉, 실시간 데이터를 기반으로 광고 성과를 철저히 측정하고 SNS 마케팅을 지속적으로 최적화하는 방식이다.</p>
+          <p>안다르 성공의 이면에는 이러한 퍼포먼스 마케팅을 가능하게 한 빅데이터 플랫폼이 있다. 단순히 POS 매출 데이터를 수집하는 수준을 넘어 고객 행동, 구매 패턴, 제품 반응 데이터를 통합 분석했고 이를 바탕으로 고객의 니즈를 반영한 상품을 기획해 큰 성공을 거둘 수 있었다.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:21px; line-height:1.6; color:oklch(96% 0.004 90);">"어떤 마케팅이 효과적인지, 어떤 고객이 어떤 상품에 반응하는지를 사람의 직관만으로 판단하기는 어렵다."</div>
+          </div>
+
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">BI가 필요한 이유</h2>
+          <p>특히, 최근 패션 마케팅은 SNS를 통한 대규모·반복 노출이 특징이다. 수많은 콘텐츠와 광고가 쏟아지는 환경에서 어떤 마케팅이 효과적인지, 어떤 고객이 어떤 상품에 반응하는지를 사람의 직관만으로 판단하기는 어렵다. 이제는 팔리는 상품의 특징을 데이터로 분석하고, 고객 반응을 실시간으로 추적해 마케팅 전략을 빠르게 수정하는 데이터 기반 의사결정이 경쟁력이 되고 있다.</p>
+          <p>이러한 데이터 분석은 곧 BI (비즈니스 인텔리전스)의 영역이다. 빅데이터 플랫폼에서 수집한 데이터를 BI 분석 환경(Analytics, BI)으로 연결해 어떤 제품을 더 생산할지, 어떤 마케팅 채널에 집중할지를 결정한다. 여기서 중요한 점은 데이터의 수집과 분석은 시스템이 수행하고, 사람은 그 결과를 바탕으로 최종의사결정을 내리는 구조이다.</p>
+
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">AI가 더하는 것</h2>
+          <p>더 나아가 실시간으로 쏟아지는 SNS 마케팅 데이터를 분석하고 성과를 평가하고 다음 액션을 제안하는 일은 사람이 감당하기 어려운 영역이다. 바로 이 지점에서 AI 의 역할이 부각된다. AI 에이전트는 데이터 분석을 통해 고객 반응을 예측하고 마케팅 성과를 분석할 뿐 아니라, 생성형 AI를 활용해 광고 문구와 콘텐츠까지 자동으로 생성할 수 있다.</p>
+          <p>안다르의 성공은 패션 업계가 더 이상 감각, 트렌드와 직관만으로 경쟁할 수 없음을 보여준다. 앞으로는 데이터 기반 상품 기획, 재고와 공급망 관리, BI 기반의 의사 결정, 그리고 AI 에이전트를 활용한 실시간 마케팅 최적화가 기업 경쟁력의 핵심이 될 것이다. 급변하는 시장과 예측 불가능한 소비자 니즈에 대응하려면 정교한 데이터 분석과 민첩한 실행력을 갖춰야 한다. 안다르가 보여준 것처럼 데이터 중심 (Data-Driven) 경영은 더이상 선택이 아니라 패션 기업이 지속적으로 성장하기 위한 필수 전략이다.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:21px; line-height:1.6; color:oklch(96% 0.004 90);">"데이터 기반 경영은 더 이상 전략적 선택이 아니라 지속 가능한 성장을 위한 필수 기반이 되었다."</div>
+          </div>
+        </div>
+      </sc-if>
+
+      <div style="margin-top:56px; padding-top:32px; border-top:1px solid oklch(24% 0.005 90); font-size:13px; color:oklch(55% 0.008 90); line-height:1.8;">
+        <div style="font-size:11px; letter-spacing:0.12em; color:oklch(62% 0.01 90); margin-bottom:12px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">REFERENCES</sc-if>
+          <sc-if value="{{ isKo }}">참고 자료</sc-if>
+        </div>
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+          <div>1. Andar / Eco Marketing — 2024 revenue and operating margin figures.</div>
+        </sc-if>
+        <sc-if value="{{ isKo }}">
+          <div>1. 안다르 / 에코마케팅 — 2024년 매출 및 영업이익률 데이터.</div>
+        </sc-if>
+      </div>
+
+      <div style="margin-top:64px;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:24px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">RELATED STORIES</sc-if>
+          <sc-if value="{{ isKo }}">관련 기사</sc-if>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+          <a href="article-kfashion-d2c.dc.html" style="display:block;">
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/marketing team.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">LUXURY &amp; BRAND STRATEGY</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Can AI-Powered D2C Become K-Fashion's Breakthrough to the Global Market?</div>
+          </a>
+          <a href="article-voice-first.dc.html" style="display:block;">
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/fashion designer doing a fitting.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">BIG DATA &amp; ML</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div>
+          </a>
+        </div>
+      </div>
+
+      <div style="margin-top:56px; padding-top:28px; border-top:1px solid oklch(24% 0.005 90); display:flex; justify-content:space-between; font-size:13px; color:oklch(65% 0.008 90);">
+        <a href="article-kfashion-d2c.dc.html">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">← Previous: K-Fashion D2C</sc-if>
+          <sc-if value="{{ isKo }}">← 이전: K패션 D2C</sc-if>
+        </a>
+        <span style="color:oklch(40% 0.005 90);">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">— No next story —</sc-if>
+          <sc-if value="{{ isKo }}">— 다음 기사 없음 —</sc-if>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:64px auto 0; padding:0 40px 100px;">
+    <a href="index.dc.html" style="font-size:13px; letter-spacing:0.08em; color:oklch(70% 0.01 90);">← <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Back to Fashion Tech Intelligence</sc-if><sc-if value="{{ isKo }}">홈으로 돌아가기</sc-if></a>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#111"/><text x="50" y="58" font-size="34" text-anchor="middle" fill="#c9a86a" font-family="'Bodoni Moda',serif">FTI</text></svg>
+</template>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  renderVals() {
+    return {
+      isEn: this.state.lang === 'en',
+      isKo: this.state.lang === 'ko',
+      setEn: () => this.setState({ lang: 'en' }),
+      setKo: () => this.setState({ lang: 'ko' })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&amp;family=Playfair+Display:ital@1&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:oklch(9% 0.002 90);}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:oklch(62% 0.01 90);}
+  ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
+  @font-face{font-family:'Kenoky ExtraLight';src:url('uploads/kenoky-extralight/KENOKY ExtraLight.otf');font-weight:200;}
+  @font-face{font-family:'Voire Display ExtraLight';src:url('uploads/voire-display-extralight/Voire Display ExtraLight.ttf');font-weight:200;}
+</style>
+</helmet>
+
+<div style="background:oklch(9% 0.002 90); color:oklch(96% 0.004 90); font-family:'Manrope',sans-serif; min-height:100vh;">
+
+  <div style="padding:26px 72px; text-align:center; border-bottom:1px solid oklch(30% 0.01 90);">
+    <div style="display:flex; justify-content:space-between; align-items:center; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(78% 0.01 90);">
+      <nav style="display:flex; gap:32px;">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+          <a href="archive.dc.html">Categories</a><a href="search.dc.html">Search</a><a href="about.dc.html">About</a>
+        </sc-if>
+        <sc-if value="{{ isKo }}">
+          <a href="archive.dc.html">카테고리</a><a href="search.dc.html">검색</a><a href="about.dc.html">소개</a>
+        </sc-if>
+      </nav>
+      <div>
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span onclick="{{ setEn }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; color:oklch(60% 0.01 90);">KO</span></sc-if>
+        <sc-if value="{{ isKo }}"><span onclick="{{ setEn }}" style="cursor:pointer; color:oklch(60% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">KO</span></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:48px 72px 40px; text-align:center; border-bottom:1px solid oklch(30% 0.01 90);">
+    <a href="index.dc.html" style="display: block; font-family: 'Voire Display ExtraLight',sans-serif; font-size: 80px; line-height: 1.05; font-weight: 200; letter-spacing: 0.01em">Fashion Tech<br>Intelligence</a>
+    <div style="font-family: Bodoni Moda; font-style: italic; font-size: 20px; color: oklch(70% 0.01 90); margin-top: 22px">Where Fashion, AI &amp; Data Meet</div>
+  </div>
+
+  <div style="max-width:1320px; margin:0 auto; padding:0 40px;">
+
+    <div style="display:grid; grid-template-columns:2fr 1px 1fr; gap:0; padding:56px 0;">
+      <div style="padding-right:56px;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:16px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">FEATURED — AI &amp; FUTURE</sc-if>
+          <sc-if value="{{ isKo }}">주요 기사 — AI &amp; 미래</sc-if>
+        </div>
+        <a href="article-ai-era.dc.html" style="display:block;">
+          <div style="font-family:'Bodoni Moda',serif; font-size:44px; line-height:1.14; font-weight:600; margin-bottom:20px;">
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">In the AI Era, Is Your Brand Part of the Answer?</sc-if>
+            <sc-if value="{{ isKo }}">AI 시대, 당신의 브랜드는 답변 속에 있습니까?</sc-if>
+          </div>
+        </a>
+        <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:18px; line-height:1.6; color:oklch(78% 0.01 90); margin-bottom:22px; max-width:560px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Competitive advantage no longer depends solely on whether consumers can find your brand — it depends on whether your brand appears in AI-generated answers.</sc-if>
+          <sc-if value="{{ isKo }}">경쟁 우위는 더 이상 소비자가 당신의 브랜드를 찾을 수 있는지에만 달려 있지 않다. 관건은 당신의 브랜드가 AI가 생성하는 답변 속에 등장하는지에 있다.</sc-if>
+        </div>
+        <a href="article-ai-era.dc.html" style="display:block; width:100%; aspect-ratio:16/9; overflow:hidden; margin-bottom:20px;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover; display:block;"></a>
+        <div style="font-size:13px; letter-spacing:0.06em; color:oklch(60% 0.01 90);">By Kim Eun-hie · Oracle Korea Consultant · 8 min read</div>
+      </div>
+
+      <div style="background:oklch(30% 0.01 90);"></div>
+
+      <div style="padding-left:56px;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:20px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">LATEST STORIES</sc-if>
+          <sc-if value="{{ isKo }}">최신 기사</sc-if>
+        </div>
+        <div style="display:flex; flex-direction:column;">
+          <a href="article-voice-first.dc.html" style="display:flex; gap:16px; padding:18px 0; border-bottom:1px solid oklch(24% 0.005 90);">
+            <div style="font-family:'Bodoni Moda',serif; font-size:22px; color:oklch(50% 0.01 90);">01</div>
+            <div><div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">BIG DATA &amp; ML</div><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div></div>
+          </a>
+          <a href="article-dpp-solutions.dc.html" style="display:flex; gap:16px; padding:18px 0; border-bottom:1px solid oklch(24% 0.005 90);">
+            <div style="font-family:'Bodoni Moda',serif; font-size:22px; color:oklch(50% 0.01 90);">02</div>
+            <div><div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">SUSTAINABILITY &amp; REGULATION</div><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports (DPP) and Sustainability Solutions</div></div>
+          </a>
+          <a href="article-dpp-lvmh.dc.html" style="display:flex; gap:16px; padding:18px 0; border-bottom:1px solid oklch(24% 0.005 90);">
+            <div style="font-family:'Bodoni Moda',serif; font-size:22px; color:oklch(50% 0.01 90);">03</div>
+            <div><div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">SUSTAINABILITY &amp; REGULATION</div><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports and LVMH's Aura Blockchain Consortium</div></div>
+          </a>
+          <a href="article-adidas-dpp.dc.html" style="display:flex; gap:16px; padding:18px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-size:22px; color:oklch(50% 0.01 90);">04</div>
+            <div><div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">SUSTAINABILITY &amp; REGULATION</div><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Adidas: Sustainability Strategy and the Road to Digital Product Passports</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:36px 0 56px; border-top:1px solid oklch(30% 0.01 90);">
+      <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:20px;">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">EDITOR'S PICKS</sc-if>
+        <sc-if value="{{ isKo }}">편집장의 선택</sc-if>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:40px;">
+        <a href="article-kfashion-d2c.dc.html">
+          <div style="width:100%; aspect-ratio:4/3; overflow:hidden; margin-bottom:14px;"><img src="uploads/marketing team.png" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">LUXURY &amp; BRAND STRATEGY</div><div style="font-family:'Bodoni Moda',serif; font-size:20px; line-height:1.3;">Can AI-Powered D2C Become K-Fashion's Breakthrough to the Global Market?</div>
+        </a>
+        <a href="article-andar-data.dc.html">
+          <div style="width:100%; aspect-ratio:4/3; overflow:hidden; margin-bottom:14px;"><img src="uploads/kjhgfds.png" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">BIG DATA &amp; ML</div><div style="font-family:'Bodoni Moda',serif; font-size:20px; line-height:1.3;">The Power of Data and AI Behind Andar's Turnaround Story</div>
+        </a>
+        <a href="article-tiktok-ai.dc.html">
+          <div style="width:100%; aspect-ratio:4/3; overflow:hidden; margin-bottom:14px;"><img src="uploads/tiktok scrolling.png" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.01 90); margin-bottom:6px;">CLOUD SERVICE</div><div style="font-family:'Bodoni Moda',serif; font-size:20px; line-height:1.3;">TikTok's Discovery Commerce and the Power of Invisible AI Infrastructure</div>
+        </a>
+      </div>
+    </div>
+
+    <a href="about.dc.html" style="display:flex; gap:32px; align-items:center; padding:44px 0; border-top:1px solid oklch(30% 0.01 90);">
+      <div style="width:88px; height:88px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
+      <div>
+        <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:8px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">ABOUT THE EDITOR</sc-if>
+          <sc-if value="{{ isKo }}">편집장 소개</sc-if>
+        </div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:22px; margin-bottom:6px;">Kim Eun-hie</div>
+        <div style="font-size:14px; line-height:1.6; color:oklch(70% 0.01 90); max-width:640px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Fashion &amp; IT Consultant, Oracle Korea. Writing at the intersection of fashion, artificial intelligence, and enterprise data systems.</sc-if>
+          <sc-if value="{{ isKo }}">오라클코리아 패션 &amp; IT 컨설턴트. 패션, 인공지능, 엔터프라이즈 데이터 시스템이 만나는 지점에서 글을 씁니다.</sc-if>
+        </div>
+      </div>
+    </a>
+
+    <div style="padding:28px 0 48px; border-top:1px solid oklch(24% 0.005 90); font-size:12px; color:oklch(50% 0.01 90); display:flex; justify-content:space-between;">
+      <span>© 2026 Fashion Tech Intelligence</span>
+      <span>Where Fashion, AI &amp; Data Meet</span>
+    </div>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#111"></rect><text x="50" y="58" font-size="34" text-anchor="middle" fill="#c9a86a" font-family="'Bodoni Moda',serif">FTI</text></svg>
+</template>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  renderVals() {
+    return {
+      isEn: this.state.lang === 'en',
+      isKo: this.state.lang === 'ko',
+      setEn: () => this.setState({ lang: 'en' }),
+      setKo: () => this.setState({ lang: 'ko' })
+    };
+  }
+}
+</script>
+</body>
+</html>
