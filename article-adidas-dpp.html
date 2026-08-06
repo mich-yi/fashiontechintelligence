@@ -15,6 +15,10 @@
   body{margin:0;background:oklch(9% 0.002 90);}
   a{color:inherit;text-decoration:none;}
   a:hover{color:oklch(62% 0.01 90);}
+  a{transition:color .25s ease, opacity .25s ease;}
+  a:hover{opacity:0.7;}
+  button{transition:opacity .25s ease, color .25s ease;}
+  button:hover{opacity:0.7;}
   ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
   p{margin:0;}
   h2{margin:0;}
@@ -51,7 +55,7 @@
     </div>
     <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
       <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
-      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>Kim Eun-hie · Oracle Korea Consultant</span></sc-if><sc-if value="{{ isKo }}"><span>김은희 - 한국오라클 컨설턴트</span></sc-if><span style="color:oklch(40% 0.005 90);">—</span>
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>March 27, 2026 · 6 min read</span></sc-if>
       <sc-if value="{{ isKo }}"><span>2026년 3월 27일 · 6분 소요</span></sc-if>
     </div>
@@ -91,18 +95,18 @@
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
         <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
 
-          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">From Promise to Proof</h2>
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">From promise to proof</h2>
           <p>Beginning in 2027, the European Union's Digital Product Passport (DPP) initiative will usher in a new era in which sustainability must be demonstrated through data, not simply declared through corporate commitments. In the past, companies could promote ESG initiatives and environmental policies at the organizational level. Going forward, however, they will be expected to prove — at the individual product level — that their products are safe for both people and the environment. This shift also reflects changing consumer expectations, particularly among younger generations, who increasingly favor brands that demonstrate commitments to waste reduction, environmental stewardship, and ethical labor practices.</p>
           <p>Against this backdrop, Adidas offers a compelling example of how fashion companies can prepare for the DPP era.</p>
 
-          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Designing for Zero Waste</h2>
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Designing for zero waste</h2>
           <p>One of Adidas' most notable initiatives is the Futurecraft.Loop running shoe. Manufactured from a single material — 100% recyclable thermoplastic polyurethane (TPU) — the shoe is designed without adhesives. Unlike conventional sneakers, which combine multiple materials and are difficult to recycle, Futurecraft.Loop can be ground down, melted, and remanufactured into an entirely new pair of shoes. It is, quite literally, a product designed with zero waste in mind. Similarly, Adidas' UltraBOOST Parley, made using plastic waste recovered from coastal areas, repurposes an average of 11 plastic bottles per pair.</p>
 
-          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Own the Game: The Digital Backbone</h2>
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Own the Game: the digital backbone</h2>
           <p>Adidas' sustainability strategy extends well beyond product design. The company has made significant investments in IT systems capable of managing supply chain data across its global operations. Under its Own the Game strategy, announced in 2021, Adidas committed to investing more than €1 billion in digital systems by 2025 while hiring over 1,000 IT professionals. This initiative represents more than an expansion of online sales — it reflects the company's transformation into a digitally driven retail business.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"Manually reviewing five million certification documents would reportedly take a single person approximately 19 years."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"Manually reviewing five million certification documents would reportedly take a single person approximately 19 years."</div>
           </div>
 
           <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Inside TrusTrace</h2>
@@ -111,12 +115,12 @@
           <p>One of the platform's most valuable capabilities is verifying both certificate authenticity and quantity reconciliation. AI continuously audits whether the quantity of environmentally certified fabric entering the supply chain matches the quantity of finished products leaving it. Its Certified Material Compliance (CMC) module tracks and verifies in real time whether specific fabrics and materials are genuinely certified and environmentally compliant. In simple terms, it creates a data-backed record proving both the composition of a garment and the origin of its materials.</p>
           <p>Within just four months of deployment, Adidas had used the system to track more than one million transactions spanning over 10,000 materials and product styles across 8,000 facilities. Today, it processes millions of data transactions every month. By comparison, manually reviewing five million certification documents would reportedly take a single person approximately 19 years. In this context, AI-powered automation is no longer optional — it is essential.</p>
 
-          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The Circular Playbook</h2>
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The circular playbook</h2>
           <p>Adidas' circular economy strategy is equally comprehensive. Its product development is built around three complementary principles: Reuse, maximizing the reuse of waste materials; Circular Design, designing products with future regeneration and recyclability in mind; and Regenerative Materials, incorporating biodegradable materials and sustainably farmed resources.</p>
           <p>The company also established ambitious sustainability targets, including using 100% recycled polyester by 2024 and ensuring that 90% of its products meet defined sustainability standards by 2025.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"Competitive advantage in the fashion industry is likely to depend not only on design excellence but also on the quality of supply chain data."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"Competitive advantage in the fashion industry is likely to depend not only on design excellence but also on the quality of supply chain data."</div>
           </div>
 
           <p>As the Digital Product Passport becomes mandatory in 2027, companies will be required to disclose production information and environmental impact data with unprecedented transparency. In the years ahead, competitive advantage in the fashion industry is likely to depend not only on design excellence but also on the quality of supply chain data. Adidas' approach provides one of the most practical and instructive models for companies preparing for the DPP era.</p>
@@ -187,12 +191,12 @@
           <a href="article-dpp-lvmh.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/customer examining a bag.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">SUSTAINABILITY &amp; REGULATION</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports and LVMH's Aura Blockchain Consortium</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports and LVMH's Aura Blockchain Consortium</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">디지털 여권과 LVMH의 아우라 블록체인 컨소시엄</div></sc-if>
           </a>
           <a href="article-ai-era.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">AI &amp; FUTURE</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">AI 시대, 당신의 브랜드는 답변 속에 있습니까?</div></sc-if>
           </a>
         </div>
       </div>
@@ -222,13 +226,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en' };
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('ftiLang')) || 'en' };
   renderVals() {
     return {
       isEn: this.state.lang === 'en',
       isKo: this.state.lang === 'ko',
-      setEn: () => this.setState({ lang: 'en' }),
-      setKo: () => this.setState({ lang: 'ko' })
+      setEn: () => { try{localStorage.setItem('ftiLang','en');}catch(e){} this.setState({ lang: 'en' }); },
+      setKo: () => { try{localStorage.setItem('ftiLang','ko');}catch(e){} this.setState({ lang: 'ko' }); }
     };
   }
 }

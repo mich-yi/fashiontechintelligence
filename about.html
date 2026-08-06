@@ -15,6 +15,10 @@
   body{margin:0;background:oklch(9% 0.002 90);}
   a{color:inherit;text-decoration:none;}
   a:hover{color:oklch(62% 0.01 90);}
+  a{transition:color .25s ease, opacity .25s ease;}
+  a:hover{opacity:0.7;}
+  button{transition:opacity .25s ease, color .25s ease;}
+  button:hover{opacity:0.7;}
   @font-face{font-family:'Voire Display ExtraLight';src:url('uploads/voire-display-extralight/Voire Display ExtraLight.ttf');font-weight:200;}
 </style>
 </helmet>
@@ -35,33 +39,78 @@
     </div>
   </div>
 
-  <div style="max-width:760px; margin:0 auto; padding:80px 40px 120px;">
-    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:28px;">
-      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">ABOUT THE EDITOR</sc-if>
-      <sc-if value="{{ isKo }}">편집장 소개</sc-if>
+  <div style="max-width:720px; margin:0 auto; padding:64px 40px 0;">
+    <div style="font-family:'Manrope',sans-serif; font-size:11px; letter-spacing:0.16em; color:oklch(62% 0.01 90); margin-bottom:32px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">ABOUT</sc-if>
+      <sc-if value="{{ isKo }}">소개</sc-if>
     </div>
 
-    <div style="display:flex; gap:36px; align-items:flex-start; margin-bottom:48px;">
-      <div style="width:140px; height:140px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
+    <div style="display:flex; gap:20px; align-items:center; padding-bottom:40px; border-bottom:1px solid oklch(22% 0.005 90);">
+      <div style="width:56px; height:56px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
       <div>
-        <div style="font-family:'Bodoni Moda',serif; font-size:40px; margin-bottom:8px;">Kim Eun-hie</div>
-        <div style="font-size:14px; letter-spacing:0.06em; color:oklch(65% 0.01 90);">
+        <div style="font-family:'Bodoni Moda',serif; font-size:17px; margin-bottom:3px;"><sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Kim Eun-hie</sc-if><sc-if value="{{ isKo }}">김은희</sc-if></div>
+        <div style="font-size:12px; letter-spacing:0.04em; color:oklch(60% 0.01 90);">
           <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Fashion &amp; IT Consultant, Oracle Korea</sc-if>
           <sc-if value="{{ isKo }}">오라클코리아 패션 &amp; IT 컨설턴트</sc-if>
         </div>
       </div>
     </div>
 
-    <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.85; color:oklch(88% 0.004 90);">
-      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
-        Kim Eun-hie is a Fashion &amp; IT Consultant at Oracle Korea, writing at the intersection of fashion, artificial intelligence, and enterprise data systems. Her work focuses on how AI, cloud infrastructure, and data platforms are reshaping design, supply chain, and brand strategy across the fashion industry.
-      </sc-if>
-      <sc-if value="{{ isKo }}">
-        김은희는 오라클코리아의 패션 &amp; IT 컨설턴트로, 패션과 인공지능, 엔터프라이즈 데이터 시스템이 만나는 지점에서 글을 씁니다. AI, 클라우드 인프라, 데이터 플랫폼이 패션 산업 전반의 디자인, 공급망, 브랜드 전략을 어떻게 바꾸어 놓고 있는지를 중심으로 다룹니다.
-      </sc-if>
+    <div style="font-family:'Bodoni Moda',serif; font-size:30px; line-height:1.3; font-weight:500; color:oklch(96% 0.004 90); margin-top:40px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Fashion has been the passion of my life.</sc-if>
+      <sc-if value="{{ isKo }}">패션은 제 삶의 열정이었습니다.</sc-if>
     </div>
 
-    <div style="margin-top:64px; padding-top:32px; border-top:1px solid oklch(24% 0.005 90);">
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+
+      <div style="margin-top:64px;">
+        <div style="font-family:'Manrope',sans-serif; font-size:13px; letter-spacing:0.14em; color:oklch(58% 0.012 90); margin-bottom:18px;">THE BEGINNING</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90);">
+          <p style="margin:0 0 14px;">Growing up watching my father build an apparel manufacturing business, I witnessed Korea's fashion industry evolve from OEM manufacturing to global sourcing, supply chain innovation, and today's technology-driven ecosystem.</p>
+          <p style="margin:0 0 14px;">That was where my own journey began. It inspired me to dedicate my career to the future of fashion.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:56px;">
+        <div style="font-family:'Manrope',sans-serif; font-size:13px; letter-spacing:0.14em; color:oklch(58% 0.012 90); margin-bottom:18px;">FROM NEW YORK TO MIT</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90);">
+          <p style="margin:0 0 14px;">Over the years, that journey has taken me from fashion journalism in New York to MIT, where I earned a Master of Engineering in Logistics &amp; Supply Chain Management, and later into product development, supply chain management, artificial intelligence, and enterprise transformation.</p>
+        </div>
+      </div>
+
+      <div style="margin:56px 0; padding:32px 0; border-top:1px solid oklch(24% 0.005 90); border-bottom:1px solid oklch(24% 0.005 90);">
+        <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">Through every stage of my career, I have come to believe that the future of fashion will be shaped by people who understand both creativity and technology.</div>
+      </div>
+
+      <div style="margin-top:0;">
+        <div style="font-family:'Manrope',sans-serif; font-size:13px; letter-spacing:0.14em; color:oklch(58% 0.012 90); margin-bottom:18px;">WHY FASHION TECH INTELLIGENCE EXISTS</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90);">
+          <p style="margin:0 0 14px;">I created Fashion Tech Intelligence to share what I continue to learn. My goal is to make topics such as Artificial Intelligence, Digital Product Passport (DPP), digital product development, enterprise data, and intelligent supply chains easier to understand and more relevant to the fashion industry.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:56px;">
+        <div style="font-family:'Manrope',sans-serif; font-size:13px; letter-spacing:0.14em; color:oklch(58% 0.012 90); margin-bottom:18px;">A CONTINUING CONVERSATION</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90);">
+          <p style="margin:0 0 14px;">I don't claim to have all the answers. I simply hope that the ideas, research, and experiences shared here will help fashion professionals navigate change with greater confidence and discover new opportunities for innovation.</p>
+        </div>
+        <div style="margin-top:24px; padding-top:32px; border-top:1px solid oklch(24% 0.005 90);">
+          <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">If this blog helps even one person better understand the future of fashion, it will have achieved its purpose.</div>
+        </div>
+      </div>
+
+      <div style="height:56px;"></div>
+    </sc-if>
+
+    <sc-if value="{{ isKo }}">
+      <div style="font-family:'Bodoni Moda',serif; font-size:17px; line-height:1.95; color:oklch(88% 0.004 90); margin-top:80px;">
+        김은희는 오라클코리아의 패션 &amp; IT 컨설턴트로, 패션과 인공지능, 엔터프라이즈 데이터 시스템이 만나는 지점에서 글을 씁니다. AI, 클라우드 인프라, 데이터 플랫폼이 패션 산업 전반의 디자인, 공급망, 브랜드 전략을 어떻게 바꾸어 놓고 있는지를 중심으로 다룹니다.
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:0 40px 100px;">
+    <div style="padding-top:32px; border-top:1px solid oklch(24% 0.005 90);">
       <div style="font-size:12px; color:oklch(50% 0.008 90); font-style:italic; line-height:1.7;">
         <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">All articles on this site were originally written in Korean. English versions are AI translations and may contain errors.</sc-if>
         <sc-if value="{{ isKo }}">이 사이트의 모든 기사는 원래 한국어로 작성되었습니다. 영어 버전은 AI 번역본이며 오류가 있을 수 있습니다.</sc-if>
@@ -81,13 +130,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en' };
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('ftiLang')) || 'en' };
   renderVals() {
     return {
       isEn: this.state.lang === 'en',
       isKo: this.state.lang === 'ko',
-      setEn: () => this.setState({ lang: 'en' }),
-      setKo: () => this.setState({ lang: 'ko' })
+      setEn: () => { try{localStorage.setItem('ftiLang','en');}catch(e){} this.setState({ lang: 'en' }); },
+      setKo: () => { try{localStorage.setItem('ftiLang','ko');}catch(e){} this.setState({ lang: 'ko' }); }
     };
   }
 }

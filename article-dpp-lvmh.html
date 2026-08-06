@@ -15,6 +15,10 @@
   body{margin:0;background:oklch(9% 0.002 90);}
   a{color:inherit;text-decoration:none;}
   a:hover{color:oklch(62% 0.01 90);}
+  a{transition:color .25s ease, opacity .25s ease;}
+  a:hover{opacity:0.7;}
+  button{transition:opacity .25s ease, color .25s ease;}
+  button:hover{opacity:0.7;}
   ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
   p{margin:0;}
   h2{margin:0;}
@@ -51,7 +55,7 @@
     </div>
     <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
       <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
-      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>Kim Eun-hie · Oracle Korea Consultant</span></sc-if><sc-if value="{{ isKo }}"><span>김은희 - 한국오라클 컨설턴트</span></sc-if><span style="color:oklch(40% 0.005 90);">—</span>
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>May 29, 2026 · 6 min read</span></sc-if>
       <sc-if value="{{ isKo }}"><span>2026년 5월 29일 · 6분 소요</span></sc-if>
     </div>
@@ -91,29 +95,29 @@
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
         <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
 
-          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">When Promises Meet Investigation</h2>
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">When promises meet investigation</h2>
           <p>Do you remember the headlines claiming that a Dior handbag cost just KRW 80,000 to produce? In 2024, an Italian court investigation revealed that some luxury products from Dior, Armani, and other brands had been manufactured through labor law violations and illegal subcontracting practices. At the same time, LVMH continued to promote its LIFE 360 environmental roadmap, reaffirming its commitment to sustainability. The gap between corporate promises and operational reality, however, was enough to undermine trust across the luxury industry.</p>
 
-          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Consumers Are Asking for Proof</h2>
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Consumers are asking for proof</h2>
           <p>Today's consumers are no longer easily persuaded by greenwashing. In particular, younger generations increasingly view ethical standards as a prerequisite for purchasing decisions and are far more attentive to environmental and human rights issues. What they seek is not emotional messaging, but truth backed by verifiable data.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"What they seek is not emotional messaging, but truth backed by verifiable data."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"What they seek is not emotional messaging, but truth backed by verifiable data."</div>
           </div>
 
           <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Inside the Aura Blockchain Consortium</h2>
           <p>Against this backdrop, the Aura Blockchain Consortium has emerged as a significant industry initiative. Founded in 2021 by LVMH, Prada Group, and Richemont, the consortium has since expanded to include more than 50 companies, including OTB (Jil Sander, Diesel, Maison Margiela), Mercedes-Benz, Tod's, and MCM. Their commitment to blockchain serves a clear purpose: to build Digital Product Passports (DPPs) that document a product's entire lifecycle through immutable records. Today, the platform contains more than 60 million registered products and also supports digital authentication through NFT- and SBT-based technologies.</p>
           <p>Several luxury brands have already put this approach into practice. Dior's B33 sneakers, Bulgari's Serpenti bag, H. Moser &amp; Cie's Genesis watch, and LVMH's LV Diamonds all provide blockchain-based transparency across their entire product lifecycle. More recently, MCM's Harper luggage collection joined the initiative, using data to verify its sustainability credentials. This level of transparency extends beyond regulatory compliance; it establishes the trust necessary for consumers to participate confidently in the resale economy. According to Boston Consulting Group (BCG), the global resale market is projected to reach approximately US$360 billion (around KRW 540 trillion) by 2030. Products with transparent, verifiable histories evolve beyond mere ownership to become assets within a circular economy.</p>
 
-          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">What the EU's 2027 Mandate Means</h2>
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">What the EU's 2027 mandate means</h2>
           <p>This shift extends well beyond the luxury sector and will have profound implications for Korean fashion companies. Beginning in 2027, the European Union will fully implement the Digital Product Passport (DPP) framework. In the future, simply listing fiber composition and country of origin on a garment label will no longer be sufficient. Brands will also need to provide digitally verifiable information covering raw materials, supply chains, and environmental impacts. Without this evidence, entering the European market itself may become increasingly difficult. For Korean fashion companies, this presents both a challenge and an opportunity.</p>
           <p>Many companies are rushing to adopt blockchain platforms and new IT systems. Yet the real issue is not technology — it is data. If a company cannot answer fundamental questions such as, "Has this fabric been properly certified?" or "Were the workers at this factory fairly compensated?" then no IT system, however sophisticated, can deliver meaningful business value. The priority should be integrating information scattered across ERP and PLM systems at the SKU level while collecting comprehensive data throughout the supply chain. Once this data foundation is established, companies can connect systems through APIs and adapt far more effectively to DPP requirements.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"The true value of luxury will no longer be defined by aura alone, but by trust that can be substantiated through data."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"The true value of luxury will no longer be defined by aura alone, but by trust that can be substantiated through data."</div>
           </div>
 
-          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">From Aura to Trust</h2>
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">From aura to trust</h2>
           <p>Ultimately, sustainability in the future of fashion will be measured not by promises, but by proof. Consumers will continue asking more difficult questions, and brands must be prepared to answer them with data. Without verifiable evidence, even a brand's identity may begin to erode. The true value of luxury will no longer be defined by aura alone, but by trust that can be substantiated through data. For the Korean fashion industry, the ability to navigate this transformation — and to remain globally competitive — will ultimately depend on data itself.</p>
         </div>
       </sc-if>
@@ -174,12 +178,12 @@
           <a href="article-ai-era.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">AI &amp; FUTURE</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">AI 시대, 당신의 브랜드는 답변 속에 있습니까?</div></sc-if>
           </a>
           <a href="article-voice-first.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/fashion designer doing a fitting.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">BIG DATA &amp; ML</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">보이스 퍼스트: 음성 AI와 STT가 바꾸는 패션 디자인</div></sc-if>
           </a>
         </div>
       </div>
@@ -209,13 +213,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en' };
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('ftiLang')) || 'en' };
   renderVals() {
     return {
       isEn: this.state.lang === 'en',
       isKo: this.state.lang === 'ko',
-      setEn: () => this.setState({ lang: 'en' }),
-      setKo: () => this.setState({ lang: 'ko' })
+      setEn: () => { try{localStorage.setItem('ftiLang','en');}catch(e){} this.setState({ lang: 'en' }); },
+      setKo: () => { try{localStorage.setItem('ftiLang','ko');}catch(e){} this.setState({ lang: 'ko' }); }
     };
   }
 }

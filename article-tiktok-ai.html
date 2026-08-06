@@ -15,6 +15,10 @@
   body{margin:0;background:oklch(9% 0.002 90);}
   a{color:inherit;text-decoration:none;}
   a:hover{color:oklch(62% 0.01 90);}
+  a{transition:color .25s ease, opacity .25s ease;}
+  a:hover{opacity:0.7;}
+  button{transition:opacity .25s ease, color .25s ease;}
+  button:hover{opacity:0.7;}
   ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
   p{margin:0;}
   h2{margin:0;}
@@ -51,7 +55,7 @@
     </div>
     <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
       <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
-      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>Kim Eun-hie · Oracle Korea Consultant</span></sc-if><sc-if value="{{ isKo }}"><span>김은희 - 한국오라클 컨설턴트</span></sc-if><span style="color:oklch(40% 0.005 90);">—</span>
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>February 6, 2026 · 6 min read</span></sc-if>
       <sc-if value="{{ isKo }}"><span>2026년 2월 6일 · 6분 소요</span></sc-if>
     </div>
@@ -91,31 +95,31 @@
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
         <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
 
-          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The Rise of Discovery Commerce</h2>
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The rise of Discovery Commerce</h2>
           <p>"When all you see is what you love, how could it not be fun?" The slogan from TikTok's advertising campaign captures the essence of its AI-powered recommendation engine. In September 2023, TikTok expanded that capability with the launch of TikTok Shop, introducing a new shopping paradigm known as Discovery Commerce. Rather than searching for products directly, users discover items unexpectedly while scrolling. As entertainment seamlessly evolves into purchasing, TikTok has become more than a social platform — it has reshaped the entire consumer journey.</p>
           <p>TikTok Shop generated approximately US$33.2 billion (KRW 48 trillion) in gross merchandise value (GMV) in 2024 and is projected to surpass US$66 billion (KRW 96 trillion) in 2025. Across its 1.6 billion global users, including 170 million in the United States, consumers are embracing a new shopping experience in which products are discovered unexpectedly while scrolling through content. Live shopping hosted by creators transforms products into engaging entertainment, while shoppers become creators themselves by sharing reviews under hashtags such as #TikTokMadeMeBuyIt, fueling another cycle of consumer engagement.</p>
 
-          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Project Texas and Data Sovereignty</h2>
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Project Texas and data sovereignty</h2>
           <p>Behind this experience lies a powerful AI infrastructure. At Oracle AI World, Oracle introduced Project Texas, offering a glimpse into the infrastructure that supports TikTok's recommendation engine. After facing the possibility of a U.S. ban in 2020 over concerns surrounding data privacy and national security, TikTok partnered with Oracle to migrate U.S. user data into a dedicated Oracle Cloud region. This move addressed data sovereignty and security concerns while providing a stable foundation for operating within the U.S. market.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"The moment a user taps 'Like,' TikTok's AI is already calculating which video should appear next."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"The moment a user taps 'Like,' TikTok's AI is already calculating which video should appear next."</div>
           </div>
 
-          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The 400 Gbps Highway</h2>
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The 400 Gbps highway</h2>
           <p>Securely storing data, however, is only part of the equation. To analyze the real-time behavioral data generated by hundreds of millions of users and instantly deliver AI-powered recommendations, TikTok also requires ultra-high-speed networking and GPU-based AI infrastructure.</p>
           <p>Understanding the preferences of more than 150 million users requires collecting enormous volumes of real-time behavioral signals — including clicks, swipes, comments, and watch time — alongside the continuous stream of video metadata generated every second. To support this workload, TikTok connects edge data centers to Oracle Cloud's central AI training region through a 400 Gbps FastConnect dedicated network. The company also reduced the number of network hops from data collection to processing, minimizing latency across the system.</p>
           <p>The scale of this infrastructure is remarkable. A 400 Gbps connection delivers substantially greater bandwidth than both a typical 1 Gbps home internet connection and many competing 100 Gbps dedicated enterprise networks. Data transmitted at these extraordinary speeds is immediately available for AI training and inference. By combining ultra-high-speed networking with GPU-powered AI infrastructure, the platform can deliver hyper-personalized recommendations in as little as 0.1 seconds.</p>
 
-          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Inside the GPU Superclusters</h2>
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Inside the GPU superclusters</h2>
           <p>Equally impressive is the efficiency of TikTok's AI computing architecture. The platform leverages Oracle Cloud's RoCE (RDMA over Converged Ethernet)-based GPU superclusters to maximize AI inference performance. Originally developed to accelerate Oracle database workloads, RDMA technology has evolved into a core component of modern AI infrastructure. Thousands of GPUs exchange data directly through Direct Memory Access (DMA) without passing through CPUs or operating systems, enabling AI models to train and perform inference at extraordinary speed. Like high-performance sports cars racing down a traffic-free 400 Gbps highway, the system analyzes user preferences almost instantaneously and recommends content with the highest likelihood of driving engagement and purchases.</p>
           <p>TikTok's success is not simply a triumph of recommendation algorithms. It is a triumph of engineering. While users immerse themselves in shopping experiences, 400 Gbps FastConnect serves as the platform's digital expressway, and RoCE-powered GPU clusters continuously perform real-time AI inference behind the scenes. In the end, Discovery Commerce is made possible by infrastructure that remains almost entirely invisible to the user.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"In the age of AI, infrastructure is just as important as content."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"In the age of AI, infrastructure is just as important as content."</div>
           </div>
 
-          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The Lesson for Korean Fashion</h2>
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The lesson for Korean fashion</h2>
           <p>The lesson for Korea's fashion industry is equally clear. Trend-driven products and engaging content alone are no longer enough to compete on the global stage. Sustainable competitive advantage will depend on AI infrastructure capable of processing global-scale traffic while uncovering the hidden preferences of consumers around the world. In the age of AI, infrastructure is just as important as content.</p>
         </div>
       </sc-if>
@@ -176,12 +180,12 @@
           <a href="article-ai-era.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">AI &amp; FUTURE</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">AI 시대, 당신의 브랜드는 답변 속에 있습니까?</div></sc-if>
           </a>
           <a href="article-dpp-solutions.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/qr code image.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">SUSTAINABILITY &amp; REGULATION</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports (DPP) and Sustainability Solutions</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports (DPP) and Sustainability Solutions</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">DPP 시행과 지속가능 솔루션</div></sc-if>
           </a>
         </div>
       </div>
@@ -211,13 +215,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en' };
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('ftiLang')) || 'en' };
   renderVals() {
     return {
       isEn: this.state.lang === 'en',
       isKo: this.state.lang === 'ko',
-      setEn: () => this.setState({ lang: 'en' }),
-      setKo: () => this.setState({ lang: 'ko' })
+      setEn: () => { try{localStorage.setItem('ftiLang','en');}catch(e){} this.setState({ lang: 'en' }); },
+      setKo: () => { try{localStorage.setItem('ftiLang','ko');}catch(e){} this.setState({ lang: 'ko' }); }
     };
   }
 }

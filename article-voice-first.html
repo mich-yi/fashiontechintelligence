@@ -15,6 +15,10 @@
   body{margin:0;background:oklch(9% 0.002 90);}
   a{color:inherit;text-decoration:none;}
   a:hover{color:oklch(62% 0.01 90);}
+  a{transition:color .25s ease, opacity .25s ease;}
+  a:hover{opacity:0.7;}
+  button{transition:opacity .25s ease, color .25s ease;}
+  button:hover{opacity:0.7;}
   p{margin:0;}
   h2{margin:0;}
   ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
@@ -51,7 +55,7 @@
     </div>
     <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
       <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
-      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>Kim Eun-hie · Oracle Korea Consultant</span></sc-if><sc-if value="{{ isKo }}"><span>김은희 - 한국오라클 컨설턴트</span></sc-if><span style="color:oklch(40% 0.005 90);">—</span>
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>August 3, 2026 · 7 min read</span></sc-if>
       <sc-if value="{{ isKo }}"><span>2026년 8월 3일 · 7분 소요</span></sc-if>
     </div>
@@ -90,20 +94,20 @@
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
         <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
 
-          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">The Meeting-Minutes Problem</h2>
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">The meeting-minutes problem</h2>
           <p>"Who's going to take the meeting minutes?" For many professionals, it's an all-too-familiar question. Today, many professionals simply record meetings using Naver Clova Note, where AI automatically converts speech into text, summarizes the key points, and generates meeting minutes. Tasks that once required hours of replaying recordings and manually transcribing conversations can now be completed in just minutes.</p>
           <p>But is Speech-to-Text (STT) technology useful only for documenting meetings? Far from it. In healthcare, it is already being used to automatically generate clinical records. In the fashion industry, it is evolving into a productivity tool that can generate designers' fitting feedback and technical specifications in real time.</p>
           <p>When discussing the era of generative AI, most people think first of AI-generated advertising images or digital catalogs. Yet the greatest productivity gains in fashion may come not from images, but from speech. Every day, designers, technical designers, and production managers exchange countless verbal instructions and discussions. The moment those conversations are transformed into digital data, repetitive documentation and communication bottlenecks can be eliminated, paving the way for AI-powered workflow automation.</p>
 
-          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">From Healthcare to the Fitting Room</h2>
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">From healthcare to the fitting room</h2>
           <p>This vision is already becoming reality in healthcare. Oracle and NVIDIA have introduced an AI-powered voice system that transcribes physicians' spoken notes in real time, accurately recognizes medical terminology, and automatically stores the information in Electronic Health Record (EHR) systems. Previously, clinicians had to create EHR documentation after patient consultations using voice memos or handwritten notes. Now, documentation happens simultaneously with patient care.</p>
           <p>At the core of this system is NVIDIA Riva, a GPU-accelerated speech AI development platform that improves speech recognition accuracy by learning specialized medical terminology. Running on Oracle Cloud Infrastructure (OCI) Kubernetes environments, it delivers reliable performance.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"AI has moved beyond simple transcription by understanding industry-specific terminology and business processes, enabling meaningful workflow automation."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"AI has moved beyond simple transcription by understanding industry-specific terminology and business processes, enabling meaningful workflow automation."</div>
           </div>
 
-          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">How Voice-First AI Works</h2>
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">How Voice-First AI works</h2>
           <p>The significance of this technology extends well beyond basic speech transcription. During speech recognition, NVIDIA Riva removes background noise, accounts for accents and unique pronunciation, and converts spoken language into highly accurate text. Its language models then resolve homonyms by selecting the words and sentences that best fit the surrounding context. Translation models can also be incorporated into the workflow.</p>
 
           <figure style="margin:8px 0;">
@@ -111,11 +115,11 @@
             <figcaption style="font-family:'Manrope',sans-serif; font-size:13px; font-style:italic; color:oklch(52% 0.008 90); margin-top:12px;">Fig. 1 — Each stage of the ASR pipeline can be independently customized, from keyword boosting at intake to inverse text normalization on output. Source: NVIDIA Riva documentation.</figcaption>
           </figure>
 
-          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">Fashion's Documentation Bottleneck</h2>
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">Fashion's documentation bottleneck</h2>
           <p>The fashion industry is well-positioned to adopt the same approach. Today, design reviews, sample revisions, Tech Pack creation, and communication with manufacturing partners still rely heavily on unstructured channels such as phone calls, messaging platforms, and email. For example, a designer may say, "Please lower the neckline by 1.5 cm," or "Increase the pant hem width by 1 cm." In many cases, a technical designer must manually enter these revisions into the Tech Pack or relay them verbally to others.</p>
           <p>If revision requests are omitted or incorrectly documented, mistakes can propagate through the Tech Pack, resulting in costly rework, production delays, and unnecessary sample development — ultimately increasing both lead times and operating costs.</p>
 
-          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">What It Means for Tech Packs</h2>
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">What it means for Tech Packs</h2>
           <p>This is precisely where Voice-First AI comes into play. Speech AI trained on fashion-specific terminology can transcribe a designer's spoken instructions in real time while automatically categorizing revisions by pattern, size, and garment component. Vision AI can then analyze photographs of revised garment areas and insert them into the appropriate sections of the Tech Pack. Once the designer completes the final review through a human-in-the-loop process, the updated Tech Pack can be automatically distributed across the PLM system, material teams, pattern makers, production management, and sewing factories.</p>
           <p>The ultimate value of this transformation is not reducing headcount — it is eliminating waiting time. The fashion industry's biggest bottlenecks stem from unstructured tacit knowledge, fragmented data, and repetitive documentation. By combining Speech-to-Text technology with AI, these workflows can be automated end to end. As a result, fashion designers are freed to focus on what matters most: creative design work.</p>
           <p>In the Voice-First era, speech becomes documentation, documentation becomes data, and the future of fashion innovation may depend not on AI that draws better, but on AI that listens better.</p>
@@ -178,12 +182,12 @@
           <a href="article-ai-era.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">AI &amp; FUTURE</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">AI 시대, 당신의 브랜드는 답변 속에 있습니까?</div></sc-if>
           </a>
           <a href="article-dpp-lvmh.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/customer examining a bag.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">SUSTAINABILITY &amp; REGULATION</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports and LVMH's Aura Blockchain Consortium</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Digital Product Passports and LVMH's Aura Blockchain Consortium</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">디지털 여권과 LVMH의 아우라 블록체인 컨소시엄</div></sc-if>
           </a>
         </div>
       </div>
@@ -213,13 +217,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en' };
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('ftiLang')) || 'en' };
   renderVals() {
     return {
       isEn: this.state.lang === 'en',
       isKo: this.state.lang === 'ko',
-      setEn: () => this.setState({ lang: 'en' }),
-      setKo: () => this.setState({ lang: 'ko' })
+      setEn: () => { try{localStorage.setItem('ftiLang','en');}catch(e){} this.setState({ lang: 'en' }); },
+      setKo: () => { try{localStorage.setItem('ftiLang','ko');}catch(e){} this.setState({ lang: 'ko' }); }
     };
   }
 }

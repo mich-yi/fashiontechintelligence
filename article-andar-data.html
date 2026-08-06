@@ -15,6 +15,10 @@
   body{margin:0;background:oklch(9% 0.002 90);}
   a{color:inherit;text-decoration:none;}
   a:hover{color:oklch(62% 0.01 90);}
+  a{transition:color .25s ease, opacity .25s ease;}
+  a:hover{opacity:0.7;}
+  button{transition:opacity .25s ease, color .25s ease;}
+  button:hover{opacity:0.7;}
   ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
   p{margin:0;}
   h2{margin:0;}
@@ -51,16 +55,16 @@
     </div>
     <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
       <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
-      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>Kim Eun-hie · Oracle Korea Consultant</span></sc-if><sc-if value="{{ isKo }}"><span>김은희 - 한국오라클 컨설턴트</span></sc-if><span style="color:oklch(40% 0.005 90);">—</span>
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>September 5, 2025 · 5 min read</span></sc-if>
       <sc-if value="{{ isKo }}"><span>2025년 9월 5일 · 5분 소요</span></sc-if>
     </div>
     </div>
 
   <div style="max-width:720px; margin:0 auto; padding:44px 40px 0;">
-    <div style="width:100%; aspect-ratio:16/9; overflow:hidden;"><img src="uploads/kjhgfds.png" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div style="width:100%; aspect-ratio:16/9; overflow:hidden;"><img src="uploads/andar.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
     <div style="font-family:'Manrope',sans-serif; font-size:13px; color:oklch(52% 0.008 90); font-style:italic; padding:14px 4px 0;">
-      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">A team reviews customer segments and channel performance — the dashboards behind the turnaround.</sc-if>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Andar's leather goods — a brand built on performance-driven, data-informed growth. Source: <a href="https://www.andar.com/" style="color:oklch(62% 0.01 90); text-decoration:underline;">andar.com</a></sc-if>
       <sc-if value="{{ isKo }}">고객 세그먼트와 채널 성과를 함께 검토하는 팀 — 턴어라운드를 뒷받침한 대시보드다.</sc-if>
     </div>
   </div>
@@ -89,28 +93,28 @@
       <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
         <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
 
-          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">A Record-Breaking Turnaround</h2>
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">A record-breaking turnaround</h2>
           <p>Andar's dramatic turnaround offers an important lesson for the fashion industry. Once weighed down by financial difficulties and weak performance, the Korean athleisure brand returned to profitability and significantly improved its earnings after being acquired by Eco Marketing in May 2021. In 2024, Andar posted record-breaking revenue of KRW 236.8 billion, while its operating margin rose from 9% in 2023 to 14%.</p>
           <p>Its success was undoubtedly driven by several strategic initiatives, including differentiated product development, category expansion, and broadening its customer base beyond women to include men and children. Yet a closer look at the post-acquisition transformation under Eco Marketing — a company renowned for performance marketing — reveals that data-driven management was at the heart of Andar's resurgence.</p>
 
-          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Performance Marketing at the Core</h2>
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Performance marketing at the core</h2>
           <p>The foundation of this success lies in performance marketing, demonstrating the critical role that data-driven operations, Business Intelligence (BI), and AI now play in modern retail. Performance marketing is a digital marketing model in which advertisers pay only when customers complete measurable actions such as clicking an advertisement, making a purchase, registering as a member, or downloading an app. In other words, it relies on real-time data to rigorously measure campaign effectiveness and continuously optimize social media marketing efforts.</p>
           <p>Behind Andar's success is a big data platform that made this level of performance marketing possible. Rather than simply collecting point-of-sale (POS) sales data, the company integrated and analyzed customer behavior, purchasing patterns, and product response data. These insights enabled Andar to develop products that more accurately reflected customer needs, contributing significantly to its commercial success.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"It is no longer feasible to determine which campaigns are effective — or which customers will respond to which products — based on intuition alone."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"It is no longer feasible to determine which campaigns are effective — or which customers will respond to which products — based on intuition alone."</div>
           </div>
 
-          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Where BI Comes In</h2>
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Where BI comes in</h2>
           <p>Today's fashion marketing is characterized by the large-scale, repeated exposure made possible through social media. In an environment flooded with content and advertising, it is no longer feasible to determine which campaigns are effective — or which customers will respond to which products — based on intuition alone. Competitive advantage increasingly depends on data-driven decision-making: analyzing the characteristics of best-selling products, tracking customer responses in real time, and rapidly refining marketing strategies based on measurable results.</p>
           <p>This is precisely where Business Intelligence (BI) becomes essential. Data collected through big data platforms is connected to BI and analytics environments, enabling companies to determine which products should be produced in greater quantities and which marketing channels deserve greater investment. Importantly, while systems are responsible for collecting and analyzing data, people remain responsible for interpreting the insights and making final business decisions.</p>
 
-          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">What AI Adds</h2>
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">What AI adds</h2>
           <p>As the volume of real-time social media marketing data continues to grow, analyzing campaign performance, evaluating results, and determining the next course of action has become increasingly difficult for humans to manage alone. This is where AI delivers its greatest value. AI agents can analyze data to predict customer behavior and evaluate marketing performance. Combined with generative AI, they can also automatically create advertising copy and marketing content, accelerating both execution and optimization.</p>
           <p>Andar's success demonstrates that fashion companies can no longer compete on creativity, trends, and intuition alone. Data-driven product planning, inventory and supply chain management, BI-powered decision-making, and real-time marketing optimization through AI agents will increasingly define competitive advantage. To respond effectively to rapidly changing markets and unpredictable consumer demand, companies must combine sophisticated data analysis with agile execution. As Andar's experience illustrates, data-driven management is no longer a strategic option — it has become an essential foundation for sustainable growth in the fashion industry.</p>
 
           <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
-            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"Data-driven management is no longer a strategic option — it has become an essential foundation for sustainable growth."</div>
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.5; color:oklch(96% 0.004 90);">"Data-driven management is no longer a strategic option — it has become an essential foundation for sustainable growth."</div>
           </div>
         </div>
       </sc-if>
@@ -163,14 +167,14 @@
         </div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
           <a href="article-kfashion-d2c.html" style="display:block;">
-            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/marketing team.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/cosmetics.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">LUXURY &amp; BRAND STRATEGY</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Can AI-Powered D2C Become K-Fashion's Breakthrough to the Global Market?</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Can AI-Powered D2C Become K-Fashion's Breakthrough to the Global Market?</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">AI 기반 D2C, K패션의 글로벌 돌파구 될까</div></sc-if>
           </a>
           <a href="article-voice-first.html" style="display:block;">
             <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/fashion designer doing a fitting.png" style="width:100%; height:100%; object-fit:cover;"></div>
             <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">BIG DATA &amp; ML</div>
-            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div>
+            <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div></sc-if><sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">보이스 퍼스트: 음성 AI와 STT가 바꾸는 패션 디자인</div></sc-if>
           </a>
         </div>
       </div>
@@ -200,13 +204,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en' };
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('ftiLang')) || 'en' };
   renderVals() {
     return {
       isEn: this.state.lang === 'en',
       isKo: this.state.lang === 'ko',
-      setEn: () => this.setState({ lang: 'en' }),
-      setKo: () => this.setState({ lang: 'ko' })
+      setEn: () => { try{localStorage.setItem('ftiLang','en');}catch(e){} this.setState({ lang: 'en' }); },
+      setKo: () => { try{localStorage.setItem('ftiLang','ko');}catch(e){} this.setState({ lang: 'ko' }); }
     };
   }
 }
