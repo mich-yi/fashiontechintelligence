@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital@1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:oklch(9% 0.002 90);}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:oklch(62% 0.01 90);}
+  p{margin:0;}
+  h2{margin:0;}
+  ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
+  .toc a:hover{color:oklch(96% 0.004 90);}
+  @font-face{font-family:'Voire Display ExtraLight';src:url('uploads/voire-display-extralight/Voire Display ExtraLight.ttf');font-weight:200;}
+</style>
+</helmet>
+
+<div style="background:oklch(9% 0.002 90); color:oklch(96% 0.004 90); font-family:'Manrope',sans-serif; min-height:100vh;">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:26px 56px; border-bottom:1px solid oklch(30% 0.01 90); flex-wrap:wrap; gap:16px;">
+    <a href="index.html" style="font-family:'Voire Display ExtraLight',sans-serif; font-size:24px; letter-spacing:0.01em;">Fashion Tech Intelligence</a>
+    <div style="display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
+      <nav style="display:flex; gap:28px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(80% 0.01 90);">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><a href="archive.html">Categories</a><a href="search.html">Search</a><a href="about.html">About</a></sc-if>
+        <sc-if value="{{ isKo }}"><a href="archive.html">카테고리</a><a href="search.html">검색</a><a href="about.html">소개</a></sc-if>
+      </nav>
+      <div style="font-size:12px; letter-spacing:0.08em;">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span onclick="{{ setEn }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; color:oklch(60% 0.01 90);">KO</span></sc-if>
+        <sc-if value="{{ isKo }}"><span onclick="{{ setEn }}" style="cursor:pointer; color:oklch(60% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">KO</span></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:64px 40px 0;">
+    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:20px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">AI &amp; FUTURE</sc-if>
+      <sc-if value="{{ isKo }}">AI &amp; 미래</sc-if>
+    </div>
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:52px; line-height:1.1; font-weight:600; margin-bottom:22px;">In the AI Era, Is Your Brand Part of the Answer?</div></sc-if>
+    <sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:48px; line-height:1.2; font-weight:600; margin-bottom:22px;">AI 시대, 당신의 브랜드는 답변 속에 있습니까?</div></sc-if>
+    <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; line-height:1.6; color:oklch(78% 0.005 90); margin-bottom:26px; max-width:640px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">As generative AI reshapes how consumers discover products, brands must optimize not for search rankings, but for the answers AI gives.</sc-if>
+      <sc-if value="{{ isKo }}">생성형 AI가 소비자의 상품 발견 방식을 바꾸면서, 브랜드는 검색 순위가 아니라 AI가 내놓는 답변을 위해 최적화해야 한다.</sc-if>
+    </div>
+    <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
+      <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
+      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>August 4, 2026 · 8 min read</span></sc-if>
+      <sc-if value="{{ isKo }}"><span>2026년 8월 4일 · 8분 소요</span></sc-if>
+    </div>
+    </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:44px 40px 0;">
+    <div style="width:100%; aspect-ratio:16/9; overflow:hidden;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div style="font-family:'Manrope',sans-serif; font-size:13px; color:oklch(52% 0.008 90); font-style:italic; padding:14px 4px 0; max-width:720px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Consumers increasingly discover and vet fashion brands through conversational AI, not just a search bar.</sc-if>
+      <sc-if value="{{ isKo }}">소비자는 이제 검색창뿐 아니라 대화형 AI를 통해 패션 브랜드를 발견하고 비교하는 경우가 점점 늘고 있다.</sc-if>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:56px auto 0; padding:0 40px; display:flex; flex-direction:column;">
+    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:22px; text-align:left;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">IN THIS ARTICLE</sc-if>
+      <sc-if value="{{ isKo }}">목차</sc-if>
+    </div>
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+      <a href="#s1" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">The Shift From Search to Answers</a>
+      <a href="#s2" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">Why GEO Is the New SEO</a>
+      <a href="#s3" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">Building an AI-Ready Website</a>
+      <a href="#s4" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">Automating Brand Intelligence</a>
+      <a href="#s5" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">The AI-Native Storefront</a>
+    </sc-if>
+    <sc-if value="{{ isKo }}">
+      <a href="#s1" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">검색에서 답변으로의 전환</a>
+      <a href="#s2" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">새로운 SEO, GEO</a>
+      <a href="#s3" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">AI 대응 웹사이트 구축</a>
+      <a href="#s4" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">브랜드 인텔리전스 자동화</a>
+      <a href="#s5" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:16px 0; border-bottom:1px solid oklch(24% 0.005 90); text-align:left;">AI 네이티브 스토어</a>
+    </sc-if>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:56px 40px 0;">
+    <div>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
+
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">The Shift From Search to Answers</h2>
+          <p>Just three and a half years after ChatGPT's arrival, the pace of change has been so rapid that it feels like we've entered a different era. I worked as a merchandiser when Fashionplus launched in 2000. Back then, online shopping meant slowly browsing products by clicking through menus one level at a time. Even seemingly minor questions — such as whether a two-level navigation structure ("Brand &gt; Jackets") was more user-friendly than a three-level hierarchy ("Brand &gt; Apparel &gt; Jackets") — were the subject of serious consulting discussions.</p>
+          <p>As the internet evolved through the era of webzines and online communities, brands built trust through content and user experience. Then came the search era, when consumers stopped navigating menus and began typing keywords into search bars instead. In response, brands focused on Search Engine Optimization (SEO) to improve their visibility in search results.</p>
+          <p>Today, with the rise of generative AI, the consumer journey is undergoing yet another transformation. Nowhere is this shift more evident than in the fashion industry. Consumers ask highly specific, contextual questions such as, "Can you recommend running shoes for this season?" "Which brands are known for gorpcore?" "What clothes should I pack for a trip to Vietnam?" or "Can you recommend blouses that flatter the midsection?"</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"Competitive advantage no longer depends solely on whether consumers can find your brand — it depends on whether your brand appears in AI-generated answers."</div>
+          </div>
+
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">Why GEO Is the New SEO</h2>
+          <p>In this new environment, the brands recommended by AI increasingly influence purchasing decisions. Competitive advantage no longer depends solely on whether consumers can find your brand — it depends on whether your brand appears in AI-generated answers. The priority is no longer just Search Engine Optimization (SEO), but ensuring that generative AI understands your brand. This is the foundation of Generative Engine Optimization (GEO).</p>
+
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">Building an AI-Ready Website</h2>
+          <p>So where should fashion e-commerce platforms begin if they want to become AI-ready websites? The first step is allowing AI crawlers to access the site through the robots.txt file and providing the data they need to interpret the brand. An llm.txt file should contain information such as the brand's identity, URLs for new product releases, FAQs, and sizing information. Product information should also be structured using the Schema.org standard.</p>
+          <p>Rather than limiting metadata to SKUs and prices, brands should organize information in a format AI can easily interpret, including style looks, TPO (Time, Place, Occasion), body-type recommendations, style preferences, seasonal suitability, and fabric functionality. For standardized product attributes, brands can reference Google Merchant Center specifications, incorporate them into their databases, and embed them within HTML. Ultimately, the key is data architecture.</p>
+
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">Automating Brand Intelligence</h2>
+          <p>Much of this process can be automated using generative AI infrastructure. By building on a foundation model (general-purpose large language model) and training it with a company's proprietary unstructured data, businesses can create customized AI models tailored to their brands.</p>
+          <p>A Retrieval-Augmented Generation (RAG) agent can then retrieve relevant information from the database to generate brand-specific product pages, while simultaneously converting the content into structured data that AI crawlers can immediately parse and understand. Consider a customer searching for "a flowy resort dress with a feminine silhouette." A RAG agent could automatically retrieve product attributes from the database — such as Material: Linen, TPO: Travel Wear, Silhouette: H-Line, and Fit: Loose Fit — populate the corresponding Schema.org fields, and generate customer-facing product descriptions at the same time.</p>
+          <p>With a well-designed database and a customized AI model, brands can simultaneously automate website content creation and build AI-friendly product information. As these models learn from hundreds of thousands of product records, they can automatically generate product detail pages tailored to a brand's identity while optimizing descriptions so that key product attributes naturally surface in AI-generated recommendations.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"The online store of the future will no longer be merely an e-commerce website."</div>
+          </div>
+
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">The AI-Native Storefront</h2>
+          <p>The online store of the future will no longer be merely an e-commerce website. It must become an AI-friendly platform that AI systems can read, understand, and recommend before consumers ever visit it.</p>
+          <p>In the AI era, branding can no longer rely solely on compelling imagery or emotionally resonant copywriting. Competitive advantage will increasingly depend on the quality and structure of the data that AI can understand. Brands must translate their identity into structured data and standardized attributes, then present that information in formats optimized for AI consumption.</p>
+          <p>The future is one in which AI understands and recommends brands before customers discover them. To ensure your brand becomes part of AI-generated answers, now is the time to evaluate your data. Well-prepared data will be the foundation of brand competitiveness in the age of AI.</p>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isKo }}">
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.95; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
+
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">검색에서 답변으로의 전환</h2>
+          <p>챗 GPT가 등장한지 불과 3년반 만에 세상은 격세지감을 느낄 만큼 빠르게 변했다. 필자는 2000년 패션 플러스(Fashionplus) 런칭 당시 MD로 일했는데, 그때는 메뉴를 하나씩 클릭하며 상품을 천천히 둘러보던 시대였다. "메뉴 단계는 3단계(브랜드&gt;의류&gt;재킷)보다 2단계(브랜드&gt;재킷)가 더 편리하다". 지금 보면 사소한 주제로도 진지한 컨설팅을 받곤 했다. 이후 웹진(Webzine)과 커뮤니티 시대를 거치며 브랜드는 콘텐츠와 사용자 경험을 통해 신뢰를 쌓았고, 검색 시대가 열리자 소비자는 메뉴 탐색 대신 검색 창에 키워드를 입력하기 시작했다. 브랜드 역시 검색 상위 노출을 위해 SEO(Search Engine Optimization)에 집중했다.</p>
+          <p>이제 생성형 AI 시대와 함께 소비자 여정은 다시 한번 바뀌고 있다. 패션 업계에서 이 변화는 특히 극적이다. 소비자는 "이번 시즌 러닝화 추천해줘", "고프코어 브랜드 알려줘", "베트남 여행할때 입기 좋은 옷 추천해줘", "뱃살 커버되는 블라우스 알려줘" 처럼 아주 구체적인 상황을 질문한다. 결국 AI가 어떤 브랜드를 추천하느냐가 구매를 좌우하게 되는 시대, 즉 'AI의 답변 안에 내 브랜드가 등장하느냐'가 경쟁력이 된 것이다.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:21px; line-height:1.6; color:oklch(96% 0.004 90);">"결국 AI가 어떤 브랜드를 추천하느냐가 구매를 좌우하게 되는 시대, 즉 'AI의 답변 안에 내 브랜드가 등장하느냐'가 경쟁력이 된 것이다."</div>
+          </div>
+
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">새로운 SEO, GEO</h2>
+          <p>이제 중요한 것은 검색 엔진 최적화(SEO)를 넘어 생성형 AI가 브랜드를 이해하도록 만드는 것이다. 이를 위한 전략이 바로 GEO (Generative Engine Optimization, 생성형 엔진 최적화)이다.</p>
+
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">AI 대응 웹사이트 구축</h2>
+          <p>그렇다면 패션 온라인 몰을 AI 친화적 사이트로 바꾸려면 무엇부터 해야 할까? 우선 robots.txt에서 AI 크롤러의 접근을 허용하고 AI가 읽어갈 데이터를 제공해야 한다. llm.txt 에는 브랜드 정체성, 신상품 주소, FAQ, 사이즈 정보 등을 담는다. 또한, 상품 정보는 schema.org 형식으로 구조화해야 한다. 단순히 SKU와 가격뿐 아니라 Look, TPO(Time, Place, Occasion), 체형 정보, 취향(스타일 무드), 계절감, 소재 기능성까지 AI가 이해하기 쉬운 방식으로 정리해야 한다. 표준 속성이 궁금하다면, Google Merchant Center의 Attribute 정보를 참고해 DB에 반영하고 HTML에 삽입하면 된다. 결국 핵심은 데이터 설계이다.</p>
+
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">브랜드 인텔리전스 자동화</h2>
+          <p>이 과정은 생성형 AI 인프라를 활용해 자동화할 수 있다. 범용 LLM (Foundation Model) 위에 기업이 보유한 비정형 데이터를 학습시키면 브랜드 맞춤형 모델(Customized model)을 구축할 수 있다. 여기에 RAG (Retrieval-Augmented Generation) 에이전트가 DB에서 필요한 데이터를 검색해 브랜드에 맞는 상품 상세 페이지를 생성하고, AI 크롤러가 즉시 파싱할 수 있는 구조화 데이터로 변환해 웹페이지에 반영한다.</p>
+          <p>예를 들어, "여리여리한 핏의 휴양지 원피스"를 찾는 고객의 요청이 들어왔다고 가정해 보자. RAG 에이전트는 DB에서 속성값을 가져와 '소재: 린넨', 'TPO: 트래블 웨어', '실루엣: H라인', '핏: 루즈핏' 과 같은 정보를 schema.org에 자동 입력하고, 고객이 읽을 상품의 상세 페이지 콘텐츠까지 함께 생성한다. 이처럼 잘 설계된 DB와 맞춤형 모델은 웹사이트 콘텐츠 생산과 AI 친화적인 상품정보 구성을 동시에 가능하게 한다. 나아가 수십만 개의 상품 데이터를 학습한 모델은 브랜드에 맞는 상품 상세페이지를 자동생성하고, 핵심 키워드가 AI 답변 속에 자연스럽게 녹아 들도록 문구까지 최적화할 수 있다.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:21px; line-height:1.6; color:oklch(96% 0.004 90);">"결국 미래의 쇼핑몰은 단순한 전자상거래 사이트가 아니라, AI가 먼저 읽고 이해하며 추천하는 AI 친화형 웹사이트가 되어야 한다."</div>
+          </div>
+
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90); margin:0;">AI 네이티브 스토어</h2>
+          <p>결국 미래의 쇼핑몰은 단순한 전자상거래 사이트가 아니라, AI가 먼저 읽고 이해하며 추천하는 AI 친화형 웹사이트가 되어야 한다.</p>
+          <p>결국 AI 시대 브랜딩은 더이상 화려한 이미지나 감성적인 카피만으로 완성되지 않는다. 핵심은 AI 가 이해할 수 있는 잘 정리된 '데이터'의 종류와 품질에 달려있다. 브랜드의 정체성을 데이터와 속성값으로 구조화하고, AI가 읽기 쉬운 형태로 웹사이트에 담아야 한다. 앞으로는 고객보다 먼저 AI가 브랜드를 이해하고 추천하는 시대가 열린다. 우리 브랜드가 AI의 답변 속에 등장할 수 있도록 지금부터 데이터를 점검해야 한다. 준비된 데이터만이 AI 시대 브랜드 경쟁력의 출발점이 될 것이다.</p>
+        </div>
+      </sc-if>
+
+      <div style="margin-top:56px; padding-top:32px; border-top:1px solid oklch(24% 0.005 90); font-size:13px; color:oklch(55% 0.008 90); line-height:1.8;">
+        <div style="font-size:11px; letter-spacing:0.12em; color:oklch(62% 0.01 90); margin-bottom:12px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">REFERENCES</sc-if>
+          <sc-if value="{{ isKo }}">참고 자료</sc-if>
+        </div>
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+          <div>1. Schema.org — structured data vocabulary for e-commerce product markup.</div>
+          <div>2. Google Merchant Center — product attribute specification reference.</div>
+        </sc-if>
+        <sc-if value="{{ isKo }}">
+          <div>1. Schema.org — 이커머스 상품 마크업을 위한 구조화 데이터 어휘.</div>
+          <div>2. 구글 머천트 센터 — 상품 속성 규격 참고 자료.</div>
+        </sc-if>
+      </div>
+
+      <div style="margin-top:64px;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:24px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">RELATED STORIES</sc-if>
+          <sc-if value="{{ isKo }}">관련 기사</sc-if>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+          <a href="article-voice-first.html" style="display:block;">
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/fashion designer doing a fitting.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">BIG DATA &amp; ML</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">Voice-First: How Speech AI and STT Are Transforming Fashion Design</div>
+          </a>
+          <a href="article-tiktok-ai.html" style="display:block;">
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/tiktok scrolling.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">CLOUD SERVICE</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">TikTok's Discovery Commerce and the Power of Invisible AI Infrastructure</div>
+          </a>
+        </div>
+      </div>
+
+      <div style="margin-top:56px; padding-top:28px; border-top:1px solid oklch(24% 0.005 90); display:flex; justify-content:space-between; font-size:13px; color:oklch(65% 0.008 90);">
+        <span style="color:oklch(40% 0.005 90);">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">— No previous story —</sc-if>
+          <sc-if value="{{ isKo }}">— 이전 기사 없음 —</sc-if>
+        </span>
+        <a href="article-voice-first.html">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Next: Voice-First →</sc-if>
+          <sc-if value="{{ isKo }}">다음: 보이스 퍼스트 →</sc-if>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:820px; margin:64px auto 0; padding:0 40px 100px;">
+    <a href="index.html" style="font-size:13px; letter-spacing:0.08em; color:oklch(70% 0.01 90);">← <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Back to Fashion Tech Intelligence</sc-if><sc-if value="{{ isKo }}">홈으로 돌아가기</sc-if></a>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#111"/><text x="50" y="58" font-size="34" text-anchor="middle" fill="#c9a86a" font-family="'Bodoni Moda',serif">FTI</text></svg>
+</template>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  renderVals() {
+    return {
+      isEn: this.state.lang === 'en',
+      isKo: this.state.lang === 'ko',
+      setEn: () => this.setState({ lang: 'en' }),
+      setKo: () => this.setState({ lang: 'ko' })
+    };
+  }
+}
+</script>
+</body>
+</html>

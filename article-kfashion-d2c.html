@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:oklch(9% 0.002 90);}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:oklch(62% 0.01 90);}
+  ::selection{background:oklch(62% 0.01 90);color:#0a0a0a;}
+  p{margin:0;}
+  h2{margin:0;}
+  @font-face{font-family:'Voire Display ExtraLight';src:url('uploads/voire-display-extralight/Voire Display ExtraLight.ttf');font-weight:200;}
+</style>
+</helmet>
+
+<div style="background:oklch(9% 0.002 90); color:oklch(96% 0.004 90); font-family:'Manrope',sans-serif; min-height:100vh;">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:26px 56px; border-bottom:1px solid oklch(30% 0.01 90); flex-wrap:wrap; gap:16px;">
+    <a href="index.html" style="font-family:'Voire Display ExtraLight',sans-serif; font-size:24px; letter-spacing:0.01em;">Fashion Tech Intelligence</a>
+    <div style="display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
+      <nav style="display:flex; gap:28px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(80% 0.01 90);">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><a href="archive.html">Categories</a><a href="search.html">Search</a><a href="about.html">About</a></sc-if>
+        <sc-if value="{{ isKo }}"><a href="archive.html">카테고리</a><a href="search.html">검색</a><a href="about.html">소개</a></sc-if>
+      </nav>
+      <div style="font-size:12px; letter-spacing:0.08em;">
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span onclick="{{ setEn }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; color:oklch(60% 0.01 90);">KO</span></sc-if>
+        <sc-if value="{{ isKo }}"><span onclick="{{ setEn }}" style="cursor:pointer; color:oklch(60% 0.01 90);">EN</span><span style="color:oklch(50% 0.01 90);"> / </span><span onclick="{{ setKo }}" style="cursor:pointer; border-bottom:1px solid oklch(62% 0.01 90);">KO</span></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:64px 40px 0;">
+    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:20px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">LUXURY &amp; BRAND STRATEGY</sc-if>
+      <sc-if value="{{ isKo }}">럭셔리 &amp; 브랜드 전략</sc-if>
+    </div>
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><div style="font-family:'Bodoni Moda',serif; font-size:44px; line-height:1.15; font-weight:600; margin-bottom:22px;">Can AI-Powered D2C Become K-Fashion's Breakthrough to the Global Market?</div></sc-if>
+    <sc-if value="{{ isKo }}"><div style="font-family:'Bodoni Moda',serif; font-size:38px; line-height:1.25; font-weight:600; margin-bottom:22px;">AI 기반 D2C, K패션의 글로벌 돌파구 될까</div></sc-if>
+    <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:18px; line-height:1.6; color:oklch(78% 0.005 90); margin-bottom:26px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Glossier and SKIMS show what a data-driven, direct relationship with customers can do — and what K-fashion still needs to build.</sc-if>
+      <sc-if value="{{ isKo }}">글로시에와 스킴스는 데이터 기반의 직접적인 고객 관계가 무엇을 만들어낼 수 있는지 보여준다 — 그리고 K패션이 아직 갖추지 못한 것이 무엇인지도.</sc-if>
+    </div>
+    <div style="display:flex; gap:16px; align-items:center; font-size:13px; letter-spacing:0.04em; color:oklch(60% 0.01 90); padding-bottom:40px; border-bottom:1px solid oklch(24% 0.005 90);">
+      <div style="width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0;"><img src="uploads/headshot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top;"></div>
+      <span>Kim Eun-hie · Oracle Korea Consultant</span><span style="color:oklch(40% 0.005 90);">—</span>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><span>December 4, 2025 · 6 min read</span></sc-if>
+      <sc-if value="{{ isKo }}"><span>2025년 12월 4일 · 6분 소요</span></sc-if>
+    </div>
+    </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:44px 40px 0;">
+    <div style="width:100%; aspect-ratio:16/9; overflow:hidden;"><img src="uploads/marketing team.png" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div style="font-family:'Manrope',sans-serif; font-size:13px; color:oklch(52% 0.008 90); font-style:italic; padding:14px 4px 0;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Reading performance dashboards alongside the collection — the new discipline behind D2C growth.</sc-if>
+      <sc-if value="{{ isKo }}">컬렉션 옆에서 성과 대시보드를 함께 읽는 것 — D2C 성장을 뒷받침하는 새로운 업무 방식이다.</sc-if>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:56px auto 0; padding:0 40px; display:flex; flex-direction:column;">
+    <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:18px;">
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">IN THIS ARTICLE</sc-if>
+      <sc-if value="{{ isKo }}">목차</sc-if>
+    </div>
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+      <a href="#s1" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">The Korean Wave's missing piece</a>
+      <a href="#s2" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">From SPA to AI-powered D2C</a>
+      <a href="#s3" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">Glossier: feedback as blueprint</a>
+      <a href="#s4" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">SKIMS: data at every layer</a>
+      <a href="#s5" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">What K-fashion needs next</a>
+    </sc-if>
+    <sc-if value="{{ isKo }}">
+      <a href="#s1" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">한류가 채우지 못한 조각</a>
+      <a href="#s2" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">SPA에서 AI 기반 D2C로</a>
+      <a href="#s3" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">글로시에: 피드백이 곧 청사진</a>
+      <a href="#s4" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">스킴스: 모든 층위의 데이터</a>
+      <a href="#s5" style="font-family:'Bodoni Moda',serif; font-size:15px; color:oklch(80% 0.006 90); line-height:1.4; padding:10px 0; border-bottom:1px solid oklch(24% 0.005 90);">K패션에 필요한 다음 단계</a>
+    </sc-if>
+  </div>
+
+  <div style="max-width:720px; margin:0 auto; padding:56px 40px 0;">
+    <div>
+      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.85; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
+
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">The Korean Wave's Missing Piece</h2>
+          <p>The global success of K-culture and K-beauty has raised expectations that K-fashion could also establish a strong international presence by building on the cultural appeal of the Korean Wave. The reality, however, is far more challenging. While Korea's fashion industry is recognized for its sophisticated design sensibility and ability to respond quickly to emerging trends, it has yet to build the global brand power and distribution infrastructure needed to achieve a comparable level of international influence.</p>
+          <p>Most Korean fashion brands continue to rely on intermediary sales channels such as department stores, select shops, and online marketplaces. Although these channels generate sales, they also own the customer data. Brands can see what they sell, but they rarely know who purchased their products, why they made those purchases, or how they came to purchase them. In this environment, the Direct-to-Consumer (D2C) strategy that fueled the success of K-culture and K-beauty may offer K-fashion a realistic path toward global growth.</p>
+
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">From SPA to AI-Powered D2C</h2>
+          <p>The roots of D2C in fashion can be traced back to pioneering SPA brands such as GAP, Zara, and UNIQLO. At the time, D2C primarily focused on shortening distribution channels and achieving economies of scale. Today, however, D2C e-commerce is about far more than reducing distribution costs. It enables brands to connect directly with consumers through data and digital technologies, transforming customer relationships into long-term business assets.</p>
+          <p>When combined with AI, the D2C model evolves even further. AI-powered D2C continuously analyzes customer preferences and behavior in real time, enabling brands to deliver personalized products and experiences. This data-driven approach may prove to be one of the most practical strategies for helping K-fashion strengthen its global competitiveness. Two companies exemplify the potential of this model: Glossier and SKIMS.</p>
+
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">Glossier: Feedback as Blueprint</h2>
+          <p>Founded in 2014, Glossier grew out of founder Emily Weiss's beauty blog, Into the Gloss. Guided by the philosophy that "the brand that turns customer feedback into data the fastest will lead the market," Weiss analyzed blog comments and product reviews to shape product development. Packaging, formulations, and color palettes were continuously refined based on customer input, making consumer feedback the blueprint for product innovation.</p>
+          <p>Glossier has long described itself as a technology company as much as a beauty brand. Built on AWS cloud infrastructure, it developed an integrated platform that revealed visitors who first engaged with its blog were significantly more likely to make purchases than those who visited only its online store. By connecting customer data across both channels, Glossier was able to identify which content influenced purchasing behavior and use those insights to power personalized marketing. In essence, it built a data-driven D2C model that connected customer insights across the entire value chain — from product planning to marketing.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"The brand that turns customer feedback into data the fastest will lead the market."</div>
+          </div>
+
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">SKIMS: Data at Every Layer</h2>
+          <p>SKIMS, the shapewear brand launched by Kim Kardashian in 2019, represents the next evolution of AI-powered D2C. The company continuously collects customer behavior data — including purchase history, shopping cart activity, and search behavior — to automatically segment customers and personalize marketing campaigns. Data generated across multiple systems is consolidated into a unified platform, allowing SKIMS to monitor marketing performance, Customer Acquisition Cost (CAC), and Customer Lifetime Value (LTV) in real time.</p>
+          <p>Machine learning further enhances these capabilities by forecasting demand for specific colors and sizes while recommending the products most relevant to individual customers. Its AI Fit solution analyzes just two customer photos to estimate body measurements and recommend the optimal size. The result is lower return rates and higher customer satisfaction.</p>
+
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:oklch(96% 0.004 90);">What K-Fashion Needs Next</h2>
+          <p>If the SPA model was built on distribution efficiency and economies of scale, AI-powered D2C creates an economy driven by data. In the future, competitive advantage in fashion will depend on how deeply brands understand their customers. Rather than simply selling products, fashion companies must evolve into organizations that design and communicate alongside their customers. At the center of this transformation are AI and data. As this transformation takes shape, K-fashion has the opportunity to grow into a globally influential industry alongside K-pop and K-beauty.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:23px; line-height:1.5; color:oklch(96% 0.004 90);">"Rather than simply selling products, fashion companies must evolve into organizations that design and communicate alongside their customers."</div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isKo }}">
+        <div style="font-family:'Bodoni Moda',serif; font-size:16px; line-height:1.95; color:oklch(88% 0.004 90); display:flex; flex-direction:column; gap:26px;">
+
+          <h2 id="s1" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">한류가 채우지 못한 조각</h2>
+          <p>K컬처와 K뷰티의 성공을 보며 K패션 역시 '한류'의 문화 감성을 바탕으로 글로벌 시장에서 성장할 수 있을지 기대하게 된다. 하지만 현실은 녹록치 않다. 한국 패션 산업은 뛰어난 디자인 감도와 빠른 트렌드 대응력을 갖추고 있지만, 정작 글로벌 브랜드 파워와 유통 시스템의 부족으로 세계 시장에서 존재감을 충분히 키우지 못하고 있다.</p>
+          <p>대부분의 브랜드는 백화점, 편집숍, 온라인몰 등 중간 유통망에 의존한다. 제품은 팔리지만 고객 데이터는 플랫폼이 가져간다. 기업은 매출은 확인할 수 있지만, 누가, 왜, 어떻게 구매했는지는 알기 어렵다. 이런 현실에서 K컬처와 K뷰티의 성공 동력이 되었던 D2C(Direct to Consumer) 전략은 K패션의 새로운 돌파구가 될 수 있을까.</p>
+
+          <h2 id="s2" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">SPA에서 AI 기반 D2C로</h2>
+          <p>패션 산업에서 D2C의 뿌리는 한때 혁신의 아이콘이던 갭(GAP), 자라(ZARA), 유니클로(UNIQLO) 같은 SPA 브랜드로부터 시작됐다. 당시 D2C는 유통 단계를 줄이고 규모의 경제를 실현하는 전략이었다. 그러나 오늘날 D2C 이커머스는 단순히 유통 마진을 절감하는 개념이 아니다. 데이터와 IT기술을 기반으로 고객과 직접 연결되고, 그 관계 자체를 브랜드 자산으로 만드는 구조로 진화하고 있다. 여기에 AI가 결합한 AI 기반 D2C 모델은 고객의 취향과 행동을 실시간으로 분석해 개인화된 제품과 경험을 제공한다. 이 모델이야말로 K패션이 글로벌 경쟁력을 확보할 수 있는 현실적인 돌파구일 수 있다.</p>
+          <p>대표적인 성공 사례가 글로시에(Glossier)와 스킴스(SKIMS)다.</p>
+
+          <h2 id="s3" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">글로시에: 피드백이 곧 청사진</h2>
+          <p>글로시에는 2014년 창업자 에밀리 와이스가 운영하던 뷰티 블로그 'Into the Gloss'에서 출발했다. 그는 "고객의 목소리를 가장 빠르게 데이터화하는 브랜드가 시장을 주도한다."라는 철학 아래 댓글과 리뷰를 분석해 제품 기획에 반영했다. 화장품의 포장, 성분, 색상은 고객이 의견을 바탕으로 지속적으로 개선되었고 고객의 목소리가 곧 제품 혁신의 설계도가 되었다.</p>
+          <p>글로시에는 '테크 회사'라고 정의하며 AWS 클라우드 기반의 통합 시스템을 구축했다. 블로그를 본 사용자가 쇼핑몰에 왔을 경우가 쇼핑몰만 방문한 사용자보다 구매 확률이 높다는 것을 발견했다. 여기에서 착안해 온라인몰과 블로그에서 발생하는 고객 데이터를 하나로 연결해서 어떤 콘텐츠를 본 고객이 실제 구매를 하는지 분석했고 이를 바탕으로 개인화 마케팅을 수행했다. 즉, 고객 데이터를 제품 기획부터 마케팅까지 연결하는데 데이터 기반 D2C 모델을 구축한 것이다.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:21px; line-height:1.6; color:oklch(96% 0.004 90);">"고객의 목소리를 가장 빠르게 데이터화하는 브랜드가 시장을 주도한다."</div>
+          </div>
+
+          <h2 id="s4" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">스킴스: 모든 층위의 데이터</h2>
+          <p>스킴스(SKIMS)는 킴 카다시안이 2019년 론칭한 보정속옷 브랜드로 AI 기반 D2C 2.0의 대표주자로 꼽힌다. 구매 이력, 장바구니, 검색 기록 등 고객 행동 데이터를 실시간으로 수집해 고객을 세분화하고 개인화 마케팅을 자동으로 수행한다. 또한 여러 시스템에서 생성되는 데이터를 하나의 데이터 플랫폼으로 통합해 마케팅 성과와 고객 획득 비용(CAC), 고객 생애가치(LTV)를 실시간으로 분석한다.</p>
+          <p>여기에 머신러닝이 더해지면 AI는 어떤 색상과 사이즈의 제품을 얼마나 생산해야 하는지 예측하고, 고객에게 가장 적합한 상품을 추천한다. AI 핏(Fit) 솔루션은 고객이 사진 두 장만 업로드하면 신체 치수를 분석해 최적의 사이즈를 제안한다. 그 결과 반품률은 낮아지고 고객 만족도는 높아진다.</p>
+
+          <h2 id="s5" style="font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; color:oklch(96% 0.004 90);">K패션에 필요한 다음 단계</h2>
+          <p>SPA가 '유통 직거래'와 '규모의 경제'였다면, AI 기반 D2C는 '데이터의 경제'를 만든다. 이제 패션 산업의 경쟁력은 고객을 얼마나 깊이 이해하느냐에 달려있다. 브랜드는 단순히 상품을 판매하는 기업이 아니라 고객과 함께 디자인하고 소통하는 기업으로 진화해야 한다. 그 중심에는 AI와 데이터가 있다. 이 러한 전환이 이루어질때 K-패션도 K-팝과 K-뷰티처럼 독자적인 글로벌 산업으로 성장할 수 있을 것이다.</p>
+
+          <div style="border-left:2px solid oklch(62% 0.01 90); padding:6px 0 6px 28px; margin:12px 0;">
+            <div style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:21px; line-height:1.6; color:oklch(96% 0.004 90);">"패션 기업은 단순히 제품을 판매하는 것을 넘어, 고객과 함께 디자인하고 소통하는 조직으로 진화해야 한다."</div>
+          </div>
+        </div>
+      </sc-if>
+
+      <div style="margin-top:56px; padding-top:32px; border-top:1px solid oklch(24% 0.005 90); font-size:13px; color:oklch(55% 0.008 90); line-height:1.8;">
+        <div style="font-size:11px; letter-spacing:0.12em; color:oklch(62% 0.01 90); margin-bottom:12px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">REFERENCES</sc-if>
+          <sc-if value="{{ isKo }}">참고 자료</sc-if>
+        </div>
+        <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+          <div>1. Glossier — AWS, Segment CDP, and integrated real-time POS.</div>
+          <div>2. SKIMS — Shopify, Klaviyo, Snowflake, Looker, and AI Fit sizing.</div>
+        </sc-if>
+        <sc-if value="{{ isKo }}">
+          <div>1. 글로시에 — AWS, 세그먼트(CDP), 통합 실시간 POS.</div>
+          <div>2. 스킴스 — Shopify, Klaviyo, Snowflake, Looker, AI Fit 사이징.</div>
+        </sc-if>
+      </div>
+
+      <div style="margin-top:64px;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:oklch(62% 0.01 90); margin-bottom:24px;">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">RELATED STORIES</sc-if>
+          <sc-if value="{{ isKo }}">관련 기사</sc-if>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+          <a href="article-tiktok-ai.html" style="display:block;">
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/tiktok scrolling.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">CLOUD SERVICE</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">TikTok's Discovery Commerce and the Power of Invisible AI Infrastructure</div>
+          </a>
+          <a href="article-ai-era.html" style="display:block;">
+            <div style="width:100%; aspect-ratio:16/10; overflow:hidden; margin-bottom:14px;"><img src="uploads/someone shopping for clothes.png" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div style="font-size:10px; letter-spacing:0.1em; color:oklch(55% 0.008 90); margin-bottom:6px;">AI &amp; FUTURE</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.3;">In the AI Era, Is Your Brand Part of the Answer?</div>
+          </a>
+        </div>
+      </div>
+
+      <div style="margin-top:56px; padding-top:28px; border-top:1px solid oklch(24% 0.005 90); display:flex; justify-content:space-between; font-size:13px; color:oklch(65% 0.008 90);">
+        <a href="article-tiktok-ai.html">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">← Previous: TikTok's Invisible AI Infrastructure</sc-if>
+          <sc-if value="{{ isKo }}">← 이전: 틱톡숍과 AI 인프라</sc-if>
+        </a>
+        <a href="article-andar-data.html">
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Next: Andar's Turnaround Story →</sc-if>
+          <sc-if value="{{ isKo }}">다음: 안다르 성공 비결 →</sc-if>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:720px; margin:64px auto 0; padding:0 40px 100px;">
+    <a href="index.html" style="font-size:13px; letter-spacing:0.08em; color:oklch(70% 0.01 90);">← <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">Back to Fashion Tech Intelligence</sc-if><sc-if value="{{ isKo }}">홈으로 돌아가기</sc-if></a>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#111"/><text x="50" y="58" font-size="34" text-anchor="middle" fill="#c9a86a" font-family="'Bodoni Moda',serif">FTI</text></svg>
+</template>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  renderVals() {
+    return {
+      isEn: this.state.lang === 'en',
+      isKo: this.state.lang === 'ko',
+      setEn: () => this.setState({ lang: 'en' }),
+      setKo: () => this.setState({ lang: 'ko' })
+    };
+  }
+}
+</script>
+</body>
+</html>
